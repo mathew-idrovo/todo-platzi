@@ -1,20 +1,16 @@
+import "./App.css";
 
-import './App.css';
+import React from "react";
 
-import React from 'react';
-
-import { TodoProvider } from '../TodoContext';
-import { AppUI } from './AppUI';
+import { TodoProvider } from "../TodoContext";
+import { AppUI } from "./AppUI";
 
 function App() {
-
-  return(
+  return (
     <TodoProvider>
-    <AppUI/>
+      <AppUI />
     </TodoProvider>
-  )
-  
+  );
 }
 
 export default App;
-
