@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function useLocalStorage(itemName, initialValue) {
   const [sincronizedItem, setsincronizedItem] = useState(true)
@@ -30,7 +30,7 @@ function useLocalStorage(itemName, initialValue) {
   const saveItem = (newItem) => {
     try {
       const stringifiedItem = JSON.stringify(newItem)
-      localStorage.saveItem(itemName, stringifiedItem)
+      localStorage.setItem(itemName, stringifiedItem)
       setItem(newItem)
     } catch (error) {
       setError(error)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useLocalStorage from './useLocalStorage'
 
 function useTodos() {
@@ -65,4 +65,4 @@ function useTodos() {
   }
 }
 
-export default useTodos
+export { useTodos }

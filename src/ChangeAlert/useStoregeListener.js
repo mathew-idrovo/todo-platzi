@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function useStoregeListener(sincronize) {
   const [storageChange, setStorageChange] = useState(false)
@@ -14,7 +14,7 @@ function useStoregeListener(sincronize) {
     setStorageChange(false)
   }
   return {
-    show: setStorageChange,
+    show: storageChange,
     toggleShow,
   }
 }
