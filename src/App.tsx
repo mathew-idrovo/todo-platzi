@@ -5,6 +5,7 @@ import { ModalTask } from './components/ModalTask'
 import { useState } from 'react'
 import { Task } from './types/task'
 import { useLocalStorage } from './hooks/useLocalStorage'
+import { TaskList } from './components/TaskList'
 
 function App() {
   const [tasks, setTasks] = useLocalStorage<Task[]>('tasks', [])
@@ -35,6 +36,7 @@ function App() {
         >
           Nueva tarea
         </Button>
+        <TaskList tasks={tasks} />
         <ModalTask
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
