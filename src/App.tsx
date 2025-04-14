@@ -4,13 +4,18 @@ import { Button } from './components/ui/button'
 import { ModalTask } from './components/ModalTask'
 import { useState } from 'react'
 import { Task } from './types/task'
+import { useLocalStorage } from './hooks/useLocalStorage'
 
 function App() {
+  const [tasks, setTasks] = useLocalStorage<Task[]>('tasks', [])
   const [currentTask, setCurrentTask] = useState<Task | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const openCreateModal = () => {
     setCurrentTask(null)
     setIsModalOpen(true)
+  }
+  const addTask = (task: Task) => {
+    setTasks([...tasks, task])
   }
   return (
     <>
@@ -33,7 +38,10 @@ function App() {
         <ModalTask
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          onSave={() => {}}
+          onSave={(task) => {
+            addTask(task)
+            setIsModalOpen(false)
+          }}
           task={currentTask}
         />
       </motion.main>
