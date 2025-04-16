@@ -4,4 +4,5 @@ export interface Task {
   description: string
   deadline: string
   createdAt: string
+  completed: boolean
 }
