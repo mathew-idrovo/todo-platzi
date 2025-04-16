@@ -102,6 +102,7 @@ function App() {
                 tasks={filteredTasks}
                 onEdit={openEditModal}
                 onDelete={deleteTask}
+                onToggleComplete={onToggleComplete}
               />
               <ModalTask
                 isOpen={isModalOpen}
