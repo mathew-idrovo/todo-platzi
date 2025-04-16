@@ -1,11 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 :root {
   --navy-100: #e6e8ef;
   --navy-200: #c1c5d8;
