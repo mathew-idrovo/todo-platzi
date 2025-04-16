@@ -38,8 +38,8 @@ export const TaskItems = ({ task, onEdit, onDelete }: TaskItemsProps) => {
       layout
     >
       <div className="bg-[var(--navy-400)] rounded-xl overflow-hidden border border-[var(--navy-300)]">
-        <div className="p-4">
-          <div className="flex justify-between items-start mb-3">
+        <div className="p-10">
+          <div className="flex justify-between items-start mb-16">
             <motion.h3
               className="text-lg font-semibold text-white"
               variants={textVariants}
