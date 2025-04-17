@@ -7,6 +7,7 @@ import { TaskList } from './components/TaskList'
 import { PlusCircle } from 'lucide-react'
 import { SearchBar } from './components/SearchBar'
 import { useTaskContext } from './context/TodoContext'
+import { TaskStats } from './components/TaskStats'
 
 export default function App() {
   const {
@@ -82,7 +83,7 @@ export default function App() {
                 Nueva Tarea
               </Button>
             </motion.div>
-
+            <TaskStats />
             <motion.div
               key={filteredTasks.length}
               initial={{ opacity: 0 }}
