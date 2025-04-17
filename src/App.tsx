@@ -21,6 +21,7 @@ export default function App() {
     deleteTask,
     closeModal,
     currentTask,
+    toggleTaskComplete,
   } = useTaskContext()
 
   const textAnimation = {
@@ -93,7 +94,7 @@ export default function App() {
                 tasks={filteredTasks}
                 onEdit={openEditModal}
                 onDelete={deleteTask}
-                //onToggleComplete={onToggleComplete}
+                onToggleComplete={toggleTaskComplete}
               />
               <ModalTask
                 isOpen={isModalOpen}
